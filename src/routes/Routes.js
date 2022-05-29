@@ -5,7 +5,8 @@ import UploadPhotos from '../components/UploadPhoto';
 import { AnimatePresence } from 'framer-motion';
 
 const Rutas = ()=>{
-    const location = useLocation()
+    const location = useLocation();
+    
     return(
         <AnimatePresence exitBeforeEnter>
              <Routes key={location.pathname} location={location}>

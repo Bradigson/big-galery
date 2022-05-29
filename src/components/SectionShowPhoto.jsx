@@ -7,7 +7,7 @@ import { app } from "../firebase/credenciales";
 import {getFirestore, collection, query, onSnapshot, orderBy} from 'firebase/firestore';
 const dataBase = getFirestore(app);
 
-const Section = ()=>{
+const Section = ({ photoCount })=>{
 
     const [photo, setPhotos] = useState([]);
 
@@ -22,7 +22,6 @@ const Section = ()=>{
         getGallery();
     },[])
 
-    
 
     return(
         <AnimatedHome>

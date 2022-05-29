@@ -1,7 +1,17 @@
+.section::-webkit-scrollbar{
+    background: #eee;
+    width:12px;
+}
+.section::-webkit-scrollbar-thumb{
+    background: #262626;
+    border-radius: 2rem;
+    border: 2px solid #eee;
+}
 .section{
     background: #eee;
     height:100vh;
     overflow-y: auto;
+ 
     
     .section__article{
         padding: 2rem;
