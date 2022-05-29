@@ -2,6 +2,7 @@ import { Link, useParams, useNavigate } from "react-router-dom";
 import Alert from 'sweetalert2';
 import { useState, useEffect } from "react";
 import '../assets/styles/PhotoZoom.scss';
+import '../assets/styles/responsiveDesign/PhotoZoomResponsive.scss';
 import AnimatedPage from "../FramerMotion/Animation";
 import { app } from "../firebase/credenciales";
 import {getFirestore, collection, query, onSnapshot, deleteDoc, doc} from 'firebase/firestore';
@@ -78,7 +79,7 @@ const PhotoZoom = ()=>{
                                         </div>
                                         <div className="card shadow">
                                             <div className="card-body">
-                                                <h1 className="fs-3 mt-5">{p.title}</h1>
+                                                <h1 className="fs-3 mt-4">{p.title}</h1>
                                                 <p className="mt-4">{p.description}</p>
 
                                                 <div className="card-footer p-0 text-muted ">
