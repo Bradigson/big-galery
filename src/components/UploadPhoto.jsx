@@ -1,7 +1,9 @@
 import {useState} from 'react';
+import { Link } from 'react-router-dom';
 import '../assets/styles/UploadPhoto.scss';
 import Clouds from '../assets/styles/DesignComponent/Cloud';
 import Balls from '../assets/styles/DesignComponent/Balls';
+import AnimatedPage from '../FramerMotion/Animation';
 import storage from '../firebase/credenciales';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { app } from '../firebase/credenciales';
@@ -72,54 +74,60 @@ const UploadPhotos = ()=>{
         });
     }
     return(
-        <div className="form-container">
-            <form className="row g-3 needs-validation shadow">
-                    {/* Upload img */}
-                    <div className="col-md-4  d-flex align-items-center w-50">
-                        <div>
-                            <label htmlFor="validationCustom01" className="form-label">Upload Photo</label>
-                            <input type="file" className="form-control" id="validationCustom01" required onChange={handlePhoto}/>
+        <AnimatedPage>
+            <div className="form-container">
+            
+                <form className="row g-3 needs-validation shadow">
+                    <div className='d-flex justify-content-end'><Link to='/'><i className='bx bxs-share me-4 fs-3'></i></Link></div>
+                    
+                        {/* Upload img */}
+                        <div className="col-md-4  d-flex align-items-center w-50">
+                            
+                            <div>
+                                <label htmlFor="validationCustom01" className="form-label">Upload Photo</label>
+                                <input type="file" className="form-control" id="validationCustom01" required onChange={handlePhoto}/>
+                            </div>
+                            <div className='ms-4 mt-4'>
+                                <button className='btn btn-outline-success' onClick={handleUploadPhoto}>Upload Photo</button>
+                            </div>
+                        
                         </div>
-                        <div className='ms-4 mt-4'>
-                            <button className='btn btn-outline-success' onClick={handleUploadPhoto}>Upload Photo</button>
+                        <div className="col-md-4">
                         </div>
-                       
-                    </div>
-                    <div className="col-md-4">
-                    </div>
 
-                    {/* Title */}
-                    <div className="col-md-4">
-                        <label htmlFor="validationCustom02" className="form-label">Photo Title</label>
-                        <input type="text" className="form-control" id="validationCustom02" placeholder='Title' required value={title} onChange={handleeTitle}/>
-                    </div>
+                        {/* Title */}
+                        <div className="col-md-4">
+                            <label htmlFor="validationCustom02" className="form-label">Photo Title</label>
+                            <input type="text" className="form-control" id="validationCustom02" placeholder='Title' required value={title} onChange={handleeTitle}/>
+                        </div>
 
-                    {/* Photo Date */}
-                    <div className="col-md-4">
-                        <label htmlFor="validationCustomUsername" className="form-label">Photo Date</label>
-                        <input type="date" className="form-control" id="validationCustomUsername"  required value={date} onChange={handleeDate}/>
-                    </div>
+                        {/* Photo Date */}
+                        <div className="col-md-4">
+                            <label htmlFor="validationCustomUsername" className="form-label">Photo Date</label>
+                            <input type="date" className="form-control" id="validationCustomUsername"  required value={date} onChange={handleeDate}/>
+                        </div>
 
-                    {/* Photo Time */}
-                    <div className="col-md-6">
-                        <label htmlFor="validationCustom03" className="form-label">Photo Time</label>
-                        <input type="time" className="form-control" id="validationCustom03" required value={time} onChange={handleeTime}/>
-                    </div>
+                        {/* Photo Time */}
+                        <div className="col-md-6">
+                            <label htmlFor="validationCustom03" className="form-label">Photo Time</label>
+                            <input type="time" className="form-control" id="validationCustom03" required value={time} onChange={handleeTime}/>
+                        </div>
 
-                    {/*Photo description  */}
-                    <div className="col-md-3">
-                        <label htmlFor="validationCustom04" className="form-label">Photo Description</label>
-                        <textarea id='validationCustom04' className="form-control" placeholder='Description' 
-                        value={description} onChange={handleeDescription}></textarea>
-                    </div>
-                   
-                    <div className="col-12">
-                        <button className="btn btn-primary" type="submit" onClick={handleCreateGallery}>Create Gallery</button>
-                    </div>
-            </form>
-            <Clouds/>
-            <Balls/>
-        </div>
+                        {/*Photo description  */}
+                        <div className="col-md-3">
+                            <label htmlFor="validationCustom04" className="form-label">Photo Description</label>
+                            <textarea id='validationCustom04' className="form-control" placeholder='Description' 
+                            value={description} onChange={handleeDescription}></textarea>
+                        </div>
+                    
+                        <div className="col-12">
+                            <button className="btn btn-primary" type="submit" onClick={handleCreateGallery}>Create Gallery</button>
+                        </div>
+                </form>
+                <Clouds/>
+                <Balls/>
+            </div>
+        </AnimatedPage>
     )
 }
 

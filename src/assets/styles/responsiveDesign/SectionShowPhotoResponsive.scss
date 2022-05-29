@@ -1,0 +1,92 @@
+// Nest Hub max
+// @media only screen and (min-width:1280px){
+//     .section{
+//         .section__article{
+//             display: grid;
+//             grid-template-columns: repeat(2, 1fr);
+//             gap : 2rem;
+
+//             .photo-container{
+//                 .card-cover{
+//                     margin-top: -320px;
+//                 }
+//             }
+            
+//         }
+//     }
+// }
+
+// ipad pro max
+@media only screen and (max-width:1024px){
+    .section{
+        .section__article{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap : 2rem;
+
+            .photo-container{
+                .card-cover{
+                    margin-top: -545px;
+                }
+            }
+            
+        }
+    }
+}
+
+// ipad
+@media only screen and (max-width:770px){
+    .section{
+        .section__article{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap : 2rem;
+
+            .photo-container{
+                .card-cover{
+                    margin-top: -410px;
+                }
+            }
+            
+        }
+    }
+}
+
+// ipad air
+@media only screen and (max-width:820px) and (min-width:780px){
+    .section{
+        .section__article{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap : 2rem;
+
+            .photo-container{
+                .card-cover{
+                    margin-top: -472px;
+                }
+            }
+            
+        }
+    }
+}
+
+
+
+
+// iphone X
+@media only screen and (max-width:600px){
+    .section{
+        .section__article{
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap : 2rem;
+
+            .photo-container{
+                .card-cover{
+                    margin-top: -472px;
+                }
+            }
+            
+        }
+    }
+}
