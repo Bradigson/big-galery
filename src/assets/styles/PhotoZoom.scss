@@ -9,8 +9,9 @@
         background: #fff;
         border-radius: 1rem;
         width:80%;
-        height:80%;
+        height:70%;
         display: flex;
+        margin-top: -50px;
        .info-container{
            width:100%;
            display: flex;
@@ -23,7 +24,7 @@
                img{
                    width:100%;
                    height:100%;
-                   object-fit: 97%;
+                   object-fit: cover;
                    border-radius: 1rem;
                }
 
